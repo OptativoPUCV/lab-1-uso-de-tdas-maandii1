@@ -453,3 +453,9 @@ vi.,  4 de abr. de 2025 11:04:09:
  tests:  5|1
 total_score: 50/70
 b1e5fc2
+vi.,  4 de abr. de 2025 11:04:25: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|1
+total_score: 50/70
+44b1514
