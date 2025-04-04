@@ -415,3 +415,29 @@ vi.,  4 de abr. de 2025 10:57:48:
  tests:  4|1
 total_score: 50/70
 ea64678
+vi.,  4 de abr. de 2025 11:02:55: 
+ exercises.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:125:64: error: 'intptr_t' undeclared (first use in this function)
+       if (c == '(' || c == '[' || c == '{') push(pila, (void*)(intptr_t)c);
+                                                                ^~~~~~~~
+exercises.c:125:64: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:125:73: error: expected ')' before 'c'
+       if (c == '(' || c == '[' || c == '{') push(pila, (void*)(intptr_t)c);
+                                                                         ^
+exercises.c:130:41: error: expected ',' or ';' before 'top'
+          char topElem = (char)(intptr_t)top(pila);
+                                         ^~~
+exercises.c:132:26: error: invalid type argument of unary '*' (have 'int')
+          if (c == ')' && *topElem != '(') return 0;
+                          ^~~~~~~~
+exercises.c:133:26: error: invalid type argument of unary '*' (have 'int')
+          if (c == ']' && *topElem != '[') return 0;
+                          ^~~~~~~~
+exercises.c:134:26: error: invalid type argument of unary '*' (have 'int')
+          if (c == '}' && *topElem != '{') return 0;
+                          ^~~~~~~~
+Compilation failed
+521d114
