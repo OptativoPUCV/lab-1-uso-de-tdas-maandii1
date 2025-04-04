@@ -114,9 +114,9 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   if (get_size(*cadena)%2 != 0) return 0;
    Stack* pila = create_stack();
-   for(int k=0 ; k < (get_size(cadena)) ; k++){
+   int tamaño = strlen(cadena);
+   for(int k=0 ; k < tamaño ; k++){
       char c = cadena[k];
       if (c == '(' || c == '[' || c == '{') push(pila, c);
       else if (c == ')' || c == ']' || c == '}') {

@@ -201,3 +201,64 @@ exercises.c:131:20: error: initialization makes integer from pointer without a c
 cc1.exe: all warnings being treated as errors
 Compilation failed
 b4e727e
+vi.,  4 de abr. de 2025 10:22:56: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:118:12: error: stray '\303' in program
+    int tamaño = strlen(cadena);
+            ^
+exercises.c:118:13: error: stray '\261' in program
+    int tamaño = strlen(cadena);
+             ^
+exercises.c:118:14: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'o'
+    int tamaño = strlen(cadena);
+              ^
+exercises.c:118:14: error: 'o' undeclared (first use in this function)
+exercises.c:118:14: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:119:26: error: stray '\303' in program
+    for(int k=0 ; k < tamaño ; k++){
+                          ^
+exercises.c:119:27: error: stray '\261' in program
+    for(int k=0 ; k < tamaño ; k++){
+                           ^
+exercises.c:119:22: error: 'tama' undeclared (first use in this function)
+    for(int k=0 ; k < tamaño ; k++){
+                      ^~~~
+exercises.c:119:28: error: expected ';' before 'o'
+    for(int k=0 ; k < tamaño ; k++){
+                            ^
+exercises.c:121:56: error: passing argument 2 of 'push' makes pointer from integer without a cast [-Werror=int-conversion]
+       if (c == '(' || c == '[' || c == '{') push(pila, c);
+                                                        ^
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:11:6: note: expected 'void *' but argument is of type 'char'
+ void push(Stack *stack, void *data) { pushFront(stack, data); }
+      ^~~~
+In file included from test.c:5:0:
+exercises.c:125:34: error: comparison between pointer and integer [-Werror]
+          if (c == ')' && topElem != '(') return 0;
+                                  ^~
+exercises.c:126:34: error: comparison between pointer and integer [-Werror]
+          if (c == ']' && topElem != '[') return 0;
+                                  ^~
+exercises.c:127:34: error: comparison between pointer and integer [-Werror]
+          if (c == '}' && topElem != '{') return 0;
+                                  ^~
+exercises.c:131:25: error: passing argument 1 of 'top' makes pointer from integer without a cast [-Werror=int-conversion]
+    int resultado = (top(pila == NULL));
+                         ^~~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: expected 'Stack * {aka struct List *}' but argument is of type 'int'
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:131:20: error: initialization makes integer from pointer without a cast [-Werror=int-conversion]
+    int resultado = (top(pila == NULL));
+                    ^
+cc1.exe: all warnings being treated as errors
+Compilation failed
+4f7c398
