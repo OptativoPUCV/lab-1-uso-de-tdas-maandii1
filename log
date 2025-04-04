@@ -342,3 +342,14 @@ exercises.c:131:20: error: initialization makes integer from pointer without a c
 cc1.exe: all warnings being treated as errors
 Compilation failed
 3877e5e
+vi.,  4 de abr. de 2025 10:31:49: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:131:9: error: unused variable 'resultado' [-Werror=unused-variable]
+    int *resultado = top(pila);
+         ^~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+f151e81

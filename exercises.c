@@ -128,8 +128,8 @@ int parentesisBalanceados(char *cadena) {
          pop(pila);
       }
    }
-   int resultado = top(pila);
+   int *resultado = top(pila);
    free(pila);
-   return resultado;
+   return 0;
 }
 
