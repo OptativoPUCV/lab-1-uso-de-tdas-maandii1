@@ -78,7 +78,10 @@ posiciona en el elemento anterior.
 void eliminaElementos(List*L, int elem){
    int *aux= first(L);
    while(aux != NULL){
-      if (*aux == elem) popCurrent(L);
+      if (*aux == elem) {
+         popCurrent(L);
+         aux = next(L);
+      }
       else aux = next(L);
    }
 }
@@ -94,7 +97,7 @@ void copia_pila(Stack* P1, Stack* P2) {
    Stack *pila_aux = create_stack();
 
    while (top(P1) != NULL){
-      push(pila_aux, top(pila_aux));
+      push(pila_aux, top(P1));
       pop(P1);
    }
 
@@ -128,7 +131,10 @@ int parentesisBalanceados(char *cadena) {
          pop(pila);
       }
    }
-   int *resultado = top(pila);
+   if (top(pila) == NULL){
+      free(pila);
+      return 1; 
+   }
    free(pila);
    return 0;
 }
