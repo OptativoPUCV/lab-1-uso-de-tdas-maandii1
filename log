@@ -359,3 +359,41 @@ vi.,  4 de abr. de 2025 10:40:10:
  tests:  4|1
 total_score: 50/70
 caa0e75
+vi.,  4 de abr. de 2025 10:47:52: 
+ exercises.c | 6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:124:17: error: initialization makes pointer from integer without a cast [-Werror=int-conversion]
+       char *c = cadena[k];
+                 ^~~~~~
+exercises.c:125:13: error: comparison between pointer and integer [-Werror]
+       if (c == '(' || c == '[' || c == '{') push(pila, c);
+             ^~
+exercises.c:125:25: error: comparison between pointer and integer [-Werror]
+       if (c == '(' || c == '[' || c == '{') push(pila, c);
+                         ^~
+exercises.c:125:37: error: comparison between pointer and integer [-Werror]
+       if (c == '(' || c == '[' || c == '{') push(pila, c);
+                                     ^~
+exercises.c:126:18: error: comparison between pointer and integer [-Werror]
+       else if (c == ')' || c == ']' || c == '}') {
+                  ^~
+exercises.c:126:30: error: comparison between pointer and integer [-Werror]
+       else if (c == ')' || c == ']' || c == '}') {
+                              ^~
+exercises.c:126:42: error: comparison between pointer and integer [-Werror]
+       else if (c == ')' || c == ']' || c == '}') {
+                                          ^~
+exercises.c:130:16: error: comparison between pointer and integer [-Werror]
+          if (c == ')' && *topElem != '(') return 0;
+                ^~
+exercises.c:131:16: error: comparison between pointer and integer [-Werror]
+          if (c == ']' && *topElem != '[') return 0;
+                ^~
+exercises.c:132:16: error: comparison between pointer and integer [-Werror]
+          if (c == '}' && *topElem != '{') return 0;
+                ^~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+64c039a
